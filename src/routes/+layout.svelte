@@ -28,16 +28,25 @@
 
 				<a
 					class="btn btn-sm variant-ghost-surface"
+					href="https://www.tiktok.com/@openhuman_ai"
+					target="_blank"
+					rel="noreferrer"
+				>
+					Tiktok
+				</a>
+
+				<a
+					class="btn btn-sm variant-ghost-surface"
 					href="https://twitter.com/openhuman_ai"
 					target="_blank"
 					rel="noreferrer"
 				>
 					Twitter
 				</a>
-				
+
 				<a
 					class="btn btn-sm variant-ghost-surface"
-					href="https://www.facebook.com/OpenHumanAI"
+					href="https://discord.gg/A4bCeYzRVfI"
 					target="_blank"
 					rel="noreferrer"
 				>
@@ -46,14 +55,13 @@
 
 				<a
 					class="btn btn-sm variant-ghost-surface"
-					href="https://www.facebook.com/OpenHumanAI"
+					href="https://www.instagram.com/openhuman_ai/"
 					target="_blank"
 					rel="noreferrer"
 				>
-					Discord
+					Instagram
 				</a>
 
-				
 				<a
 					class="btn btn-sm variant-ghost-surface"
 					href="https://github.com/skeletonlabs/skeleton"
