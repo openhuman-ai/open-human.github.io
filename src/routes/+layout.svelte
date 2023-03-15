@@ -37,6 +37,15 @@
 
 				<a
 					class="btn btn-sm variant-ghost-surface"
+					href="https://vk.com/openhuman_ai"
+					target="_blank"
+					rel="noreferrer"
+				>
+					WK
+				</a>
+
+				<a
+					class="btn btn-sm variant-ghost-surface"
 					href="https://twitter.com/openhuman_ai"
 					target="_blank"
 					rel="noreferrer"
