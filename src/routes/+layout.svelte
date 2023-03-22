@@ -14,7 +14,7 @@
 		<!-- App Bar -->
 		<AppBar>
 			<svelte:fragment slot="lead">
-				<a href="https://openhuman.ai"><strong class="text-xl">OpenHuman.ai</strong></a>
+				<a href="https://openhuman.ai"><strong class="text-xl">OpenHuman</strong></a>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 				<a
