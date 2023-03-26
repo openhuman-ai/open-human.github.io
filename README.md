@@ -1,5 +1,4 @@
 <a href="https://openhuman.ai">
-  <img alt="OpenHuman – Building blocks for your Next project" src="https://openhuman.ai/api/og">
   <h1 align="center">OpenHuman</h1>
 </a>
 
@@ -11,8 +10,8 @@
   <a href="https://twitter.com/openhuman_ai">
     <img src="https://img.shields.io/twitter/follow/openhuman_ai?style=flat&label=openhuman_ai&logo=twitter&color=0bf&logoColor=fff" alt="Steven Tey Twitter follower count" />
   </a>
-  <a href="https://github.com/steven-tey/openhuman">
-    <img src="https://img.shields.io/github/stars/steven-tey/openhuman?label=steven-tey%2Fprecedent" alt="OpenHuman repo star count" />
+  <a href="https://github.com/openhuman_ai/openhuman">
+    <img src="https://img.shields.io/github/stars/openhuman_ai/openhuman?label=openhuman_ai%2Fprecedent" alt="OpenHuman repo star count" />
   </a>
 </p>
 
@@ -37,7 +36,7 @@ You can deploy this template to Vercel with the button below:
 You can also clone & create this repo locally with the following command:
 
 ```bash
-npx create-next-app openhuman --example "https://github.com/steven-tey/openhuman"
+npx create-next-app openhuman --example "https://github.com/openhuman_ai/openhuman"
 ```
 
 ## Tech Stack + Features
@@ -69,7 +68,7 @@ https://user-images.githubusercontent.com/28986134/212368288-12f41e37-aa8c-4e0a-
 
 - `useIntersectionObserver` –  React hook to observe when an element enters or leaves the viewport
 - `useLocalStorage` – Persist data in the browser's local storage
-- `useScroll` – React hook to observe scroll position ([example](https://github.com/steven-tey/openhuman/blob/main/components/layout/index.tsx#L25))
+- `useScroll` – React hook to observe scroll position ([example](https://github.com/openhuman_ai/openhuman/blob/main/components/layout/index.tsx#L25))
 - `nFormatter` – Format numbers with suffixes like `1.2k` or `1.2M`
 - `capitalize` – Capitalize the first letter of a string
 - `truncate` – Truncate a string to a specified length
