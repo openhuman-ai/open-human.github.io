@@ -8,8 +8,8 @@
 </p>
 
 <p align="center">
-  <a href="https://twitter.com/steventey">
-    <img src="https://img.shields.io/twitter/follow/steventey?style=flat&label=steventey&logo=twitter&color=0bf&logoColor=fff" alt="Steven Tey Twitter follower count" />
+  <a href="https://twitter.com/openhuman_ai">
+    <img src="https://img.shields.io/twitter/follow/openhuman_ai?style=flat&label=openhuman_ai&logo=twitter&color=0bf&logoColor=fff" alt="Steven Tey Twitter follower count" />
   </a>
   <a href="https://github.com/steven-tey/openhuman">
     <img src="https://img.shields.io/github/stars/steven-tey/openhuman?label=steven-tey%2Fprecedent" alt="OpenHuman repo star count" />
@@ -87,4 +87,4 @@ https://user-images.githubusercontent.com/28986134/212368288-12f41e37-aa8c-4e0a-
 
 ## Author
 
-- Steven Tey ([@steventey](https://twitter.com/steventey))
+- Steven Tey ([@openhuman_ai](https://twitter.com/openhuman_ai))

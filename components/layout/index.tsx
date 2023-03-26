@@ -50,13 +50,23 @@ export default function Layout({
           <div>
             <AnimatePresence>
               {!session && status !== "loading" ? (
-                <motion.button
-                  className="rounded-full border border-black bg-black p-1.5 px-4 text-sm text-white transition-all hover:bg-white hover:text-black"
-                  onClick={() => setShowSignInModal(true)}
-                  {...FADE_IN_ANIMATION_SETTINGS}
-                >
-                  Sign In
-                </motion.button>
+                <>
+                  <motion.button
+                    className="rounded-full border border-black bg-black p-1.5 px-4 text-sm text-white transition-all hover:bg-white hover:text-black"
+                    onClick={() => setShowSignInModal(true)}
+                    {...FADE_IN_ANIMATION_SETTINGS}
+                  >
+                    Sign In
+                  </motion.button>
+
+                  <motion.button
+                    className="rounded-full border border-black bg-black p-1.5 px-4 text-sm text-white transition-all hover:bg-white hover:text-black"
+                    onClick={() => setShowSignInModal(true)}
+                    {...FADE_IN_ANIMATION_SETTINGS}
+                  >
+                    Sign Up
+                  </motion.button>
+                </>
               ) : (
                 <UserDropdown />
               )}
@@ -69,7 +79,7 @@ export default function Layout({
       </main>
       <div className="absolute w-full border-t border-gray-200 bg-white py-5 text-center">
         <p className="text-gray-500">
-          OpenHuman {" "}
+          OpenHuman{" "}
           <a
             className="font-medium text-gray-800 underline transition-colors"
             href="https://twitter.com/openhuman_ai"
