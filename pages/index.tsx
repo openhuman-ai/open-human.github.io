@@ -27,7 +27,7 @@ export default function Home() {
         }}
       >
         <motion.a
-          variants={FADE_DOWN_ANIMATION_VARIANTS}
+          // variants={FADE_DOWN_ANIMATION_VARIANTS}
           href="https://twitter.com/openhuman_ai/status/1613928948915920896"
           target="_blank"
           rel="noreferrer"
@@ -40,22 +40,21 @@ export default function Home() {
         </motion.a>
         <motion.h1
           className="bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center font-display text-4xl font-bold tracking-[-0.02em] text-transparent drop-shadow-sm md:text-7xl md:leading-[5rem]"
-          variants={FADE_DOWN_ANIMATION_VARIANTS}
+          // variants={FADE_DOWN_ANIMATION_VARIANTS}
         >
-          <Balancer>Building blocks for your Next project</Balancer>
+          <Balancer>Open realistic virtual human assistant will coming soon</Balancer>
         </motion.h1>
         <motion.p
           className="mt-6 text-center text-gray-500 md:text-xl"
-          variants={FADE_DOWN_ANIMATION_VARIANTS}
+          // variants={FADE_DOWN_ANIMATION_VARIANTS}
         >
           <Balancer>
-            An opinionated collection of components, hooks, and utilities for
-            your Next.js project.
+            Open realistic virtual human assistant will coming soon
           </Balancer>
         </motion.p>
         <motion.div
           className="mx-auto mt-6 flex items-center justify-center space-x-5"
-          variants={FADE_DOWN_ANIMATION_VARIANTS}
+          // variants={FADE_DOWN_ANIMATION_VARIANTS}
         >
           <a
             className="group flex max-w-fit items-center justify-center space-x-2 rounded-full border border-black bg-black px-5 py-2 text-sm text-white transition-colors hover:bg-white hover:text-black"
@@ -91,7 +90,7 @@ export default function Home() {
         </motion.div>
       </motion.div>
       {/* here we are animating with Tailwind instead of Framer Motion because Framer Motion messes up the z-index for child components */}
-      <div className="my-10 grid w-full max-w-screen-xl animate-[slide-down-fade_0.5s_ease-in-out] grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
+      {/* <div className="my-10 grid w-full max-w-screen-xl animate-[slide-down-fade_0.5s_ease-in-out] grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
         {features.map(({ title, description, demo, large }) => (
           <Card
             key={title}
@@ -107,7 +106,7 @@ export default function Home() {
             large={large}
           />
         ))}
-      </div>
+      </div> */}
     </Layout>
   );
 }
