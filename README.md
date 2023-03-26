@@ -1,3 +1,0 @@
-# OpenHuman.AI
-
-OpenHuman
