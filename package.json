@@ -1,6 +1,6 @@
 {
-  "name": "precedent",
-  "version": "0.1.0",
+  "name": "openhuman.ai",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev",

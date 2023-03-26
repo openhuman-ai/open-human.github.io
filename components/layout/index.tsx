@@ -40,12 +40,12 @@ export default function Layout({
           <Link href="/" className="flex items-center font-display text-2xl">
             <Image
               src="/logo.png"
-              alt="Precedent logo"
+              alt="OpenHuman logo"
               width="30"
               height="30"
               className="mr-2 rounded-sm"
             ></Image>
-            <p>Precedent</p>
+            <p>OpenHuman</p>
           </Link>
           <div>
             <AnimatePresence>
@@ -69,14 +69,14 @@ export default function Layout({
       </main>
       <div className="absolute w-full border-t border-gray-200 bg-white py-5 text-center">
         <p className="text-gray-500">
-          A free template by{" "}
+          OpenHuman {" "}
           <a
             className="font-medium text-gray-800 underline transition-colors"
-            href="https://twitter.com/steventey"
+            href="https://twitter.com/openhuman_ai"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Steven Tey
+            @openhuman_ai
           </a>
         </p>
       </div>
