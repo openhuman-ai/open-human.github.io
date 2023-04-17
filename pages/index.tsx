@@ -49,7 +49,7 @@ export default function Home() {
           // variants={FADE_DOWN_ANIMATION_VARIANTS}
         >
           <Balancer>
-            Open realistic virtual human assistant will coming soon
+          Open Realistic Human Assistant will coming soon
           </Balancer>
         </motion.p>
         <motion.div
