@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://millionscope.com
+
+# Sitemaps
+Sitemap: https://millionscope.com/sitemap.xml

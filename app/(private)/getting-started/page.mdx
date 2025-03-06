@@ -1,0 +1,142 @@
+import { Steps } from "@/nextra"
+import Image from "next/image"
+
+# Getting started
+
+{/* [Markdown Edit Here](<https://github.com/hemvip/openhuman/blob/main/openhuman/app/(private)/getting-started/page.mdx>) */}
+
+{/* openhuman Leaderboard is a leaderboard for benchmarking gesture generation models with human evaluation. */}
+
+- `/submission`: Submit your model output
+- `/study`: Study screen for human evaluation
+- `/user`: User participation
+- `/result`: Leaderboard
+
+{/* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum */}
+
+## Summary
+
+#### System naming convention
+
+- natural mocap data (ground truth): `NA`
+- submitted systems: `SA`, `SB`, ..., `SZ`
+- baseline systems: `BA`, `BB`, `BC`, ...
+
+We provide a input and output to the participants, and you generate gestures `npy` for the input.
+
+Then, we recruit Prolific to start user studies. Using pairwise comparison, we evaluate the generated gestures with human evaluation
+
+{/* <Image
+  src="/EvaluationProcess.svg"
+  alt="EvaluationProcess"
+  width={0}
+  height={0}
+  sizes="100vw"
+  style={{ width: "100%", height: "auto" }}
+/> */}
+
+## Evaluation Process
+
+<Steps>
+### Download `submission_inputs.csv` file
+
+```text
+input_code, video_file
+234083450345, 234083450345.npy
+346643424234, 346643424234.npy
+443646423423, 443646423423.npy
+```
+
+### Run your model inference
+
+Run your model inference to get all video file output.
+
+```text
+234083450345.npy
+346643424234.npy
+443646423423.npy
+```
+
+### Submission your model `.npy` output
+
+Go to `/submission` and upload all video of your model
+
+### Convert & Split to Video
+
+We will convert all `.npy` file to `.npy` video and split to mutiple segment video.
+
+### Generate all study pairwise compare screen
+
+Sample study screen
+
+<Image
+  src="/study_screen.png"
+  alt="study_screen"
+  width={0}
+  height={0}
+  sizes="100vw"
+  style={{ width: "100%", height: "auto" }}
+/>
+
+{/* ![study_screen](/study_screen.png) */}
+
+- You can visit `/study` to get information about each study screen.
+- You can visit `/user` to follow all user participation our study.
+
+### Recruit partipation on Prolific to study
+
+Each Prolific partipation will be study for
+
+<Image
+  src="/prolific.png"
+  alt="prolific"
+  width={0}
+  height={0}
+  sizes="100vw"
+  style={{ width: "100%", height: "auto" }}
+/>
+
+{/* ![prolific](/prolific.png) */}
+
+**When partipation study, we record all action and final result**
+
+**Selection Result**
+
+<Image
+  src="/selection_result.png"
+  alt="selection_result"
+  width={0}
+  height={0}
+  sizes="100vw"
+  style={{ width: "80%", height: "auto" }}
+/>
+{/* ![selection_result](/selection_result.png) */}
+
+**Actions Record**
+
+<Image
+  src="/actions_record.png"
+  alt="actions_record"
+  width={0}
+  height={0}
+  sizes="100vw"
+  style={{ width: "80%", height: "auto" }}
+/>
+{/* ![actions_record](/actions_record.png) */}
+
+### Evalution final result
+
+Sample evalution result
+
+<Image
+  src="/eval_result.png"
+  alt="eval_result"
+  width={0}
+  height={0}
+  sizes="100vw"
+  style={{ width: "80%", height: "auto" }}
+/>
+{/* ![eval_result](/eval_result.png) */}
+
+</Steps>
+```../../../components/AllStage../../../components/EvaluationProcess../../../components/openhumanLeaderboard

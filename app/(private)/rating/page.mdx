@@ -1,0 +1,34 @@
+1.  **Initialize Ratings**: Start by giving each model ($A$, $B$, $C$) an initial rating. A common starting point is 1000 for each.
+2.  **Process Each Pairwise Result**:
+
+    - For each comparison result (e.g., Result 1), update the ratings of the two models involved based on the outcome.
+    - The Elo rating update formula is:
+
+      $$
+      R_{ \text{new} } = R_{\text{old}}+K \cdot(S-E)
+      $$
+
+      where:
+
+      - $R_{\text{new}}$​ is the new rating.
+      - $R_{\text{old}}$ is the old rating.
+      - $K$ is the K-factor, which determines the maximum possible adjustment per comparison.
+      - $S$ is the score: 1 if the model wins, 0 if the model loses, and 0.5 for a draw.
+      - $E$ is the expected score based on the current ratings of the models.
+
+3.  **Calculate Expected Score**:
+
+    - The expected score $E$ for a model $A$ against a model $B$ is given by:
+      $$
+      E_A=\frac{1}{1+10^{\frac{R_B-R_A}{400}}}
+      $$
+      and similarly,
+      $$
+      E_B=\frac{1}{1+10^{\frac{R_A-R_B}{400}}}
+      $$
+
+4.  **Update Ratings for Each Comparison**:
+
+    - For each comparison, calculate the expected scores for both models and then update their ratings based on the actual outcome.
+
+5.  **Rank Models Based on Final Ratings**: After processing all pairwise results, the final ratings will indicate the ranking of the models. The model with the highest rating will be ranked first, the second highest will be ranked second, and so on.

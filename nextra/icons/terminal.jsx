@@ -1,0 +1,23 @@
+"use client"
+
+import React from 'react'
+
+export function TerminalIcon(props) {
+  return (
+    <svg
+      viewBox="0 0 28 24"
+      fill="none"
+      stroke="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M7.3 7.8L12.55 12L7.3 16.2M14.65 16.2H19.9M2.11562 1.5H25.0844C25.7005 1.5 26.2 1.99948 26.2 2.61562V21.3844C26.2 22.0005 25.7005 22.5 25.0844 22.5H2.11562C1.49948 22.5 1 22.0005 1 21.3844V2.61562C1 1.99948 1.49948 1.5 2.11562 1.5Z"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+
+  )
+}

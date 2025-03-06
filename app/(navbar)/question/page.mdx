@@ -1,0 +1,153 @@
+# About the Leaderboard
+
+The OpenHuman Gesture Generation Leaderboard is an upcoming living benchmark for gesture generation models. It allows researchers to test and showcase their models’ performance on a standardised dataset and evaluation methodology.
+
+Initially, the leaderboard will feature results from existing models that have been adapted to the BEAT-2 dataset. Following this initial phase, we’ll open the leaderboard to all researchers interested in submitting and evaluating new models.
+
+### Our goals
+
+- Establish a continuously updated **definitive ranking** of state-of-the-art models **on the most common** speech-gesture **motion capture datasets**, based on human evaluation.
+- Raise the standards for **reproducibility** by releasing all collected model outputs, human ratings, and scripts for motion visualisation, conducting user-studies, and more.
+- Use the collected human ratings to develop **better objective metrics** that are aligned with human perception of motion.
+- **Unify gesture-generation researchers** from computer vision, computer graphics, machine learning, NLP, HCI, and robotics.
+- **Evolve with the community** as new datasets, evaluations, and methodologies become available.
+
+### Outcomes
+
+Once the Leaderboard is operational, you will be able to:
+
+- **Submit** your gesture-generation model's outputs, and **receive human evaluation results in 2-4 weeks for free**, managed by our expert team.
+- **Compare** to any state-of-the-art method on the Leaderboard using our comprehensive collection of rendered video outputs, **without having to reproduce baselines**.
+- **Visualise** your generated motion and **conduct our user studies** on your own **using our easy-to-use open-source tools**.
+- ...and much more!
+
+## Setup and development timeline
+
+To construct the leaderboard, we are inviting authors of gesture-generation models published in recent years to participate in a large-scale evaluation. We will conduct comprehensive evaluation of the submitted systems, primarily based on human evaluation, which will then be published on our website, alongside all collected outputs, ratings, and scripts necessary for reproducing the evaluation.
+
+Afterwards, the leaderboard will become open to the public in **March 2025**, and we will be updating it continuously as we receive new model submissions.
+
+## Dataset
+
+#### BEAT-2 in the SMPL-X Format
+
+The leaderboard will initially evaluate models using the English recordings in the test split of the [BEAT-2 dataset](https://pantomatrix.github.io/EMAGE/). Submissions will be required to be in the same SMPL-X format as the dataset, but we will **discard facial expressions** in order to focus on the hand- and body movements.
+
+We think this data is the best candidate for an initial benchmark dataset for several reasons:
+
+1. It’s the largest public mocap dataset of gesturing (with 60 hours of data in total).
+2. BEAT, its predecessor, is one of the most commonly used gesture-generation datasets in recent years.
+3. It has a high variety of speakers and emotions, and it includes semantic gesture annotations.
+4. The SMPL-X format is compatible with many other mocap datasets, the majority of pose estimation models, and includes potential extensions (e.g., facial expressions for future iterations).
+
+![Official BEAT dataset gif that shows several animated speaking avatars.](https://pantomatrix.github.io/EMAGE/assets/video_t.gif)  
+_Speaking characters from BEAT-2 visualised with the SMPL-X body model. [(image source)](https://pantomatrix.github.io/EMAGE/)_
+
+Being a living leaderboard, the dataset used for benchmarking is expected to change in the future as better mocap datasets become available.
+
+## Submission process
+
+### Rules for participation
+
+The main goal of the OpenHuman Leaderboard is to advance the scientific field of automated gesture generation. To best achieve this, we have a few requirements for participation:
+
+1. We are primarily looking to evaluate established gesture generation systems (e.g., already published models). In practice, this means that we maintain the right to filter out submissions that do not have prior evaluation results, or are clearly far below the state-of-the-art.
+2. By participating in the leaderboard, you allow us to share your submitted motion clips with the scientific community, alongside with the videos we render from them and the human preference data collected during the evaluation.
+3. You may train your model on any dataset that is publicly available for research purposes, except for the test set of BEAT-2, or the corresponding files in the original BEAT dataset. Training on any data not publicly available for research purposes is strictly prohibited.
+4. In order to be included in the evaluation, you will have to provide a technical report describing the details of your system and how you trained it. Note that if your submission is based on an already published system, you will only have to write about how you adapted it for the leaderboard.
+
+### How to participate
+
+1. **Pre-screening**: Send an e-mail to our [contact address](mailto:contact@openhuman.ai), including the following information:
+   - Which model you intend to submit to the evaluation,
+   - A link to a document describing said model (e.g., a paper),
+   - A rough outline of planned changes to the original model (if any),
+   - A list of team members contributing to your adaptation of the model, and
+   - The name of a main responsible for the team.  
+     We will get back to you within a few days, confirming whether we can commit to evaluating your future submission.
+2. **Prepare your model**: Train your model on the official training split of the BEAT-2 dataset and/or any other publicly available mocap data, except for the BEAT-2 test set. Given an arbitrarily long speech recording, your model must be able to generate an equally long motion sequence. Speaker ID, emotion labels, and the SMPL-X body shape vector will always be available as inputs, but you are not required to use them.
+3. **Generate your synthetic motion**: For each speech recording in the BEAT-2 English test set, generate corresponding synthetic movements in the SMPL-X format. If your model is probabilistic (i.e., nondeterministic), please generate 5 samples for each input file, so that we can measure diversity.
+4. **Submit your motion data and write a technical report**: Send your motion data to us, either through e-mail or on the submission page we will prepare for you. In order for your submission to be included on the leaderboard, you have to commit to writing a technical report about your submission, including but not limited to details about data, model architecture, training methods and generation process.
+
+### What happens after your submission
+
+1. **Submission screening**: Our team will inspect your submitted motion in order to validate whether your results are suitable for the leaderboard. We will get back to you within a week, and we will only reject submission in exceptional cases (e.g., if the movements are extremely jerky or still).
+2. **Clip segmentation**: We will split your submitted motion sequences into short evaluation clips (roughly 10-15 seconds each). We will take care that the evaluation clips are aligned with full speaking turns. The timestamps of the evaluation clips will be kept private in order to prevent cherry-picking.
+3. **Video rendering**: Our research engineers will create high-quality close-up video renders of the evaluation clips, using a standardised 3D scene and a textured SMPL-X character model.
+4. **Crowd-sourced evaluations**: Once we have received enough submissions, we will conduct rigorous large-scale user studies, as detailed below on this page, and perform statistical analysis on the results.
+5. **Release of data and evaluation results**: We will update the leaderboard based on the statistical results, and publish all of your rendered videos alongside your technical report.
+6. **State-of-the-art report**: Periodically, we will invite participating teams to co-author a detailed state-of-the-art report, based on a snapshot of the leaderboard, in the style of the OpenHuman Challenge papers.
+
+## Evaluation methodology
+
+We will recruit large numbers of evaluators to conduct best-practices human evaluation. Our perceptual user studies will be designed to carefully disentangle key aspects of gesture evaluation, following what we learned from organising the [2020–2023 OpenHuman challenges](https://linktr.ee/OpenHuman_workshop).
+
+### Evaluation tasks
+
+#### Motion quality
+
+The first evaluation task will measure motion quality, in other words, to what degree do the evaluators perceive the overall movements to be natural-looking gesturing, without considering the speech. For this evaluation, the stimuli will be **silent videos**, and we will perform pairwise comparisons of motions from different sources (e.g., gesture-generation systems, baselines, or mocap data).
+
+The statistical analysis will use an Elo-style ranking system, in particular the Bradley-Terry model, similar to the methodology of [Chatbot Arena](https://lmarena.ai/). You can read more about Elo scores and the Bradley-Terry model in [this blog post](https://lmsys.org/blog/2023-12-07-leaderboard/#transition-from-online-elo-rating-system-to-bradley-terry-model); the key point is that 1) Elo-like systems naturally work well in a leaderboard setting where scores are continuously updated and the comparisons are not necessarily exhaustive; 2) the difference between the Elo scores of two systems directly expresses the probability that users prefer the output of one system over the output of the other.
+
+We believe that this approach will prove to be a highly scalable and efficient method, with interpretable results, that allows us to conduct sustainable recurring evaluations for each future submission separately.
+
+![A sketch of the evaluation interface for the user studies.](./study_screen.png)  
+_A sketch of the evaluation interface for the user studies._
+
+#### Motion specificity to speech
+
+The second evaluation task will measure whether the outputs of the gesture-generation system are _somehow related_ to the speech input. As discussed in the [OpenHuman challenge 2022 paper](https://dl.acm.org/doi/10.1145/3656374), a naive evaluation of this question – e.g., directly asking evaluators to choose which of two systems generated movements that are more appropriate for the speech – has significant risk of confounding with other factors such as motion quality.
+
+Therefore, we will use a mismatching procedure based on the [OpenHuman Challenges](https://arxiv.org/abs/2308.12646). In a nutshell, our approach will be to show two clips from the same system, one with correctly paired speech and motion, and the other with independent, intentionally misaligned motion and speech signals. Evaluators then will be tasked with indicating which of the two videos has better connection between speech and motion.
+
+This is also a pairwise comparison, but unlike the motion quality assessment, it can be performed for each system independently, therefore it avoids the confounding factor of motion quality.
+
+#### Future evaluations
+
+After the leaderboard becomes established, we will include new evaluation tasks based on what datasets become available, and what challenges become more important in the field. Some possibilities, already compatible with the BEAT2 dataset, are to evaluate facial expressions or emotion expressivity. For future datasets, it might become possible to test motion specificity to the meaning of the speech, and other types of grounding information. (See our [position paper for more ideas.](/leaderboard/position_paper))
+
+## Tooling
+
+### Standardised visualisation
+
+Visualisation is one of the most important design choices for perceptual user studies that evaluate motion synthesis. Currently, almost every gesture-generation paper uses a different character model and 3D scene configuration due to difficulties of using animation software, as well as the lack of shared 3D assets. Because character appearence and other environmental factors can have a subtle but important effect on the evaluation, this means that human evaluation results are largely incomparable to each other.
+
+We are creating a standardised visualisation setup with a realistic, but minimal 3D scene with lighting, and we will use a textured SMPL-X mesh as a high-quality human character model. There will be an option to hide the face in the videos, since our first evaluations will only be based on hand- and body motion.
+
+![A preview of the rendering style we'll use for the Leaderboard.](./render_snapshot.png)  
+_A preview of the rendering style we'll use for the Leaderboard._
+
+We are currently working on an open-source, automated pipeline for rendering videos for our user studies, based on popular animation software (e.g., Blender), which will be shared with the community after we release the leaderboard.
+
+### User-study automation
+
+To standardise the human evaluation process, we are rewriting the [HEMVIP codebase](https://github.com/openhuman-ai/openhuman-ai), which was originally developed for the OpenHuman challenges, with an emphasis on stability and ease of use. This software will also be open-sourced – our vision is to enable independent replication of our evaluations, and to lower the barriers for crowd-sourced evaluations.
+
+### Objective evaluation
+
+The leaderboard will also feature many commonly used objective metrics (e.g., FGD and beat consistency), and we are planning to develop new automated evaluation methods based on the collected human preference data. Each of these will be open-sourced with the release of the leaderboard.
+
+## Frequently Asked Questions
+
+<details>
+<summary>Why do we need a leaderboard?</summary>
+
+- Gesture generation research is currently fragmented across different datasets and evaluation protocols.
+- Objective metrics are inconsistently applied, and their validity is not sufficiently established in the literature.
+- At the same time, subjective evaluation methods often have low reproducibility, and their results are impossible to directly compare to each other.
+- This leads to a situation where it is impossible to know what is the state of the art, or to know which method works better for which purpose when comparing two publications.
+- The leaderboard is designed to directly counter these issues.
+
+</details>
+
+<details>
+<summary>How are the evaluations funded?</summary>
+
+We currently have academic funding for running the leaderboard for a period of time. Having your system evaluated by the leaderboard will be free of charge. However, if there are a lot of systems submitted, we might not be able to evaluate all of them.
+
+</details>
+
+#### Contact address
+
+[OpenHuman-leaderboard@googlegroups.com](mailto:OpenHuman-leaderboard@googlegroups.com)
